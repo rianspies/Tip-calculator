@@ -6,6 +6,8 @@ const calculateTotal = (bill, tip) =>{
     const tipPercentage = tip/100;
     const total = bill*(1 + tipPercentage);
     billTotal = Math.floor(total);
-    document.getElementById('total').innerHTML = `Total: ${billTotal}`
+    cashTip = billTotal - bill;
+    document.getElementById('cashTip').innerHTML = `You tipped: R${cashTip}`
+    document.getElementById('total').innerHTML = `Total: R${billTotal}`;
 };
 
